@@ -1,0 +1,4 @@
+mixin wrapper(type)
+	- var modifier = type ? '_' + type : ''
+	+e.wrapper.wrapper(class=modifier)&attributes(attributes)
+		block

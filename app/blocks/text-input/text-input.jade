@@ -1,0 +1,3 @@
+mixin text-input(placeholder, heightType)
+	- var modifier = heightType ? '_' + heightType : ''
+	+b('input').text-input(class=modifier type='text' placeholder=placeholder)&attributes(attributes)

@@ -1,0 +1,76 @@
+.header
+	display block
+	&__logo
+		padding-top 60px
+		padding-bottom 10px
+		text-align center
+		text-transform uppercase
+	&__title
+		font-family $gilda
+		font-size 48px
+		color $black
+	&__desc
+		margin-top 2px
+		font-size 12px
+		font-weight bold
+		letter-spacing 1.1px
+		color $light-grey
+	&__menu
+		padding-y 20px
+		display table
+		box-shadow 0 -3px 10px rgba(black, .02)
+		justify-content space-between
+	&__icons
+		display table-cell
+		min-width 140px
+		@media(max-width 800px)
+			display none
+	&__icon-btn
+		margin-x -1px
+		vertical-align middle
+		background none
+		border none
+		size 32px 42px
+	&__icon
+		size 17px
+		fill $black
+		&_fb
+			size 15px
+		&_in
+			size 14px
+		&_pinterest
+			size 14px
+	&__icon-btn:hover &__icon
+		fill lighten($black, 50%)
+	&__search
+		display table-cell
+		overflow hidden
+		width 100%
+		&_hidden
+			width 20%
+			@media(max-width 1000px)
+				width 50px
+	&__navigation
+		display table-cell
+		width 100%
+		text-align center
+		opacity 1
+		transition opacity .05s, width .1s
+		&_hidden
+			width 80%
+			@media(max-width 1000px)
+				width 50%
+				opacity 0
+			@media(max-width 800px)
+				width 1%
+	&__nav-item
+		padding 15px 20px
+		display inline-block
+		text-decoration none
+		text-transform uppercase
+		color $black
+		&:hover
+			border-bottom 0
+			color $light-grey
+		@media(max-width 1000px)
+			padding-x 10px
