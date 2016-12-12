@@ -1,21 +1,17 @@
-const searchInput = $ => {
-	const navClass = 'header__navigation';
-	const searchClass = 'header__search';
-	const inputClass = 'search-input__field';
-	const buttonClass = 'search-input__button';
+module.exports = $ => {
+	const inputClass = 'header__search-field';
+	const buttonClass = 'header__search-btn';
+	const searchClass = 'header__search-container';
 	const hiddenMod = '_hidden';
 
-	const navigation = $('.' + navClass);
-	const search = $('.' + searchClass);
 	const input = $('.' + inputClass);
 	const button = $('.' + buttonClass);
+	const search = $('.' + searchClass);
 
 	button.on('click', function (){
-		navigation.toggleClass(navClass + hiddenMod);
-		search.toggleClass(searchClass + hiddenMod);
 		input.toggleClass(inputClass + hiddenMod);
 		button.toggleClass(buttonClass + hiddenMod);
+		search.toggleClass(searchClass + hiddenMod);
 	});
-};
 
-module.exports = searchInput;
+};

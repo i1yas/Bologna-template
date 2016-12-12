@@ -1,5 +1,6 @@
 include ../wrapper/wrapper
-include ../search-input/search-input
+include ../text-input/text-input
+include ../icon/icon
 
 mixin header()
 	+b.header&attributes(attributes)
@@ -8,22 +9,30 @@ mixin header()
 				| Bologna
 			+e.desc
 				| Wordpress theme for bloggers
-		
-		+e.menu.wrapper_wide
-			+e.icons
-				+e('button').icon-btn
-					+icon('behance').icon._be
-				+e('button').icon-btn
-					+icon('facebook').icon._fb
-				+e('button').icon-btn
-					+icon('linkedin').icon._in
-				+e('button').icon-btn
-					+icon('pinterest').icon._pt
-			+e.navigation
-				- var navItems = getData('top_navigation')
-				- var anchor = ''
-				- for(var i = 0; i < navItems.length; i++)
-					- anchor = '#' + navItems[i]
-					+e('a').nav-item(href=anchor)=navItems[i]
-			+e.search._hidden
-				+search-input('hidden')
+		+e.menu-container.wrapper_wide
+			//- +e.mobile-icon
+			//- 		+e.mobile-i
+			//- 		+e.mobile-i
+			//- 		+e.mobile-i
+			+e.menu
+				+e.icons
+					+e('button').icon-btn
+						+icon('behance').icon._be
+					+e('button').icon-btn
+						+icon('facebook').icon._fb
+					+e('button').icon-btn
+						+icon('linkedin').icon._in
+					+e('button').icon-btn
+						+icon('pinterest').icon._pt
+				+e.navigation
+					- var navItems = getData('top_navigation')
+					- var anchor = ''
+					- for(var i = 0; i < navItems.length; i++)
+						- anchor = '#' + navItems[i]
+						+e('a').nav-item(href=anchor)=navItems[i]
+				+e.search
+					+e.search-container._hidden
+						+e.search-field._hidden
+							+text-input('Search...', 'small')
+						+e('button').search-btn._hidden
+							+icon('search').search-icon
