@@ -1,0 +1,19 @@
+mixin info()
+	+b.info&attributes(attributes)
+		+e('img').photo(src='assets/images/info/photo.jpg')
+		+e.about
+			| About me
+		+e.name
+			| Mona-Kim
+		+e.desc
+			| The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"
+		+e.follow
+			+e.follow-sign
+				| Follow
+			+e.follow-icons
+				+e('button').follow-btn
+					+icon('linkedin').icon
+				+e('button').follow-btn
+					+icon('twitter').icon
+				+e('button').follow-btn
+					+icon('facebook').icon

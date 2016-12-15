@@ -1,0 +1,41 @@
+.feed
+	display block
+	&__wrapper
+		padding-top 90px
+		display flex
+		justify-content space-between
+	&__posts
+		display flex
+		justify-content space-between
+		flex-shrink 1
+		flex-basis auto
+		flex-wrap wrap
+		flex-grow 1
+	&__col
+		flex-basis 400px
+		flex-shrink 0
+	&__refresh-block
+		padding-y 35px
+		text-align center
+		border-top 1px dashed #d7d7d7
+		flex-basis 100%
+	&__refresh-btn
+		background none
+		background-color white
+		border 1px solid $light-grey
+		border-radius 50%
+		size 44px
+		transition background-color .1s
+		&:hover
+			background-color #f7f7f7
+	&__refresh-icon
+		size 15px
+		fill $page-grey
+	&__post
+		margin-bottom 65px
+	&__sidebar
+		margin-left 120px
+		flex-basis 320px
+		flex-shrink 0
+	&__sidebar-block
+		margin-bottom 60px

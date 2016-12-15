@@ -1,0 +1,56 @@
+.blog-post
+	display block
+	&__cover
+		position relative
+	&__icons
+		position absolute
+		left 23px
+		bottom 5%
+		width 20px
+	&__icon-btn
+		padding-y 6px
+		background none
+		border none
+	&__icon
+		background transparent
+		border-radius 50%
+		opacity 1
+		size 20px
+		fill white
+	&__icon-btn:hover &__icon
+		opacity .7
+	&__text
+		margin-x auto
+		padding-y 27px
+		width 90%
+		text-align center
+	&__category
+		margin-bottom 20px
+		padding 3px 11px
+		display inline-block
+		font-size 12px
+		font-style italic
+		border-bottom 1px solid $light-grey
+	&__title
+		margin-bottom 20px
+		display block
+		font-family $rufina
+		font-size 24px
+		font-weight bold
+		line-height 1.4
+		text-decoration none
+		color $black
+		&:hover
+			color $page-grey
+	&__desc
+		margin-bottom 30px
+		line-height 1.5
+		&:after
+			content '...'
+	&__date
+		font-size 13px
+		color $black
+	&__year
+		color $page-grey
+		&:before
+			content '/ '

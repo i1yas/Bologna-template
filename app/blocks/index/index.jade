@@ -1,0 +1,7 @@
+include ../banner/banner
+include ../feed/feed
+
+mixin index()
+	+b.index&attributes(attributes)
+		+banner
+		+feed(getData('posts'))

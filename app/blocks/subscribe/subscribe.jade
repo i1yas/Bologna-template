@@ -1,0 +1,9 @@
+mixin subscribe()
+	+b.subscribe&attributes(attributes)
+		+e.title
+			| Subscribe to my Newsletter
+		+e('form').form
+			+e.input
+				+text-input('Your e-mail...')
+			+e('button').button
+				| Submit

@@ -1,0 +1,22 @@
+include ../icon/icon
+
+mixin blog-post(post, imgUrl)
+	+b.blog-post&attributes(attributes)
+		- var path
+		+e.cover
+			+e('img').image(src=imgUrl)
+			+e.icons
+				+e('button').icon-btn
+					+icon('share').icon
+				+e('button').icon-btn
+					+icon('comment').icon
+		+e.text
+			+e.category=post.category
+			+e('a').title(href="#")=post.title
+			+e.desc=post.desc
+			+e.date
+				- var day = post.date.day < 10 ? "0" + post.date.day : post.date.day
+				- var month = post.date.month.slice(0, 3)
+				+e('span').month=month
+				+e('span').day=day
+				+e('span').year=post.date.year
