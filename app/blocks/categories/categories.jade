@@ -1,0 +1,13 @@
+include ../heading/heading
+
+mixin categories(categories)
+	+b.categories&attributes(attributes)
+		+heading
+			| Category
+		+e.items
+			- var modifer
+			- for(var i = 0; i < categories.length; i++)
+				- modifier = ''
+				- if((i % 2) !== 0)
+					- modifier = '_not-even'
+				+e('a').item(class=modifier href='#')=categories[i]

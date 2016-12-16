@@ -1,0 +1,13 @@
+include ../heading/heading
+
+mixin instagram()
+	+b.instagram&attributes(attributes)
+		+e.title
+			+heading
+				| Instagram
+		+e.photos
+			- var path
+			- for(var i = 0; i < 4; i++)
+				- path = 'assets/images/instagram/' + (i + 1) + '.jpg'
+				+e('a').photo-link(href='#')
+					+e('img').photo(src=path)

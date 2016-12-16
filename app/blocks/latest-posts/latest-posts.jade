@@ -1,0 +1,17 @@
+include ../heading/heading
+
+mixin latest-posts(posts)
+	+b.latest-posts&attributes(attributes)
+		+heading
+			| Latest posts
+		+e.posts
+			- for(var i = 0; i < 3; i++)
+				+e.post
+					+e.post-category=posts[i].category
+					+e('a').post-title(href='#')=posts[i].title
+					+e.post-date
+						- var day = posts[i].date.day < 10 ? '0' + posts[i].date.day : posts[i].date.day
+						- var month = posts[i].date.month.slice(0, 3)
+						+e.month=month
+						+e.day=day
+						+e.year=posts[i].date.year

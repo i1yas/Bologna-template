@@ -1,6 +1,9 @@
 include ../blog-post/blog-post
 include ../info/info
 include ../subscribe/subscribe
+include ../latest-posts/latest-posts
+include ../instagram/instagram
+include ../categories/categories
 
 mixin feed(posts)
 	+b.feed&attributes(attributes)
@@ -27,11 +30,11 @@ mixin feed(posts)
 				+e.sidebar-block._subscribe
 					+subscribe
 				+e.sidebar-block._latest-post
-					| latest
+					+latest-posts(posts)
 				+e.sidebar-block._instagram
-					| instagram
+					+instagram
 				+e.sidebar-block._categories
-					| categories
+					+categories(getData('categories'))
 				+e.sidebar-block._ad
 					| advertising
 				+e.sidebar-block._tags
