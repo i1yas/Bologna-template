@@ -1,0 +1,11 @@
+mixin tags(tags)
+	+b.tags&attributes(attributes)
+		+heading
+			| Tags
+		+e.items
+			- for(var i = 0; i < tags.length; i++)
+				- var firstModifier = ''
+				- if (i === 0)
+					- firstModifier = '_first'
+				+e('span').tag(class=firstModifier)
+					+e('a').item(href='#')=tags[i]

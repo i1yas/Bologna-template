@@ -1,0 +1,23 @@
+.tags
+	display block
+	&__heading
+		margin-bottom 30px
+	&__tag
+		margin-bottom 10px
+		&:before
+			margin 2px 7px
+			display inline-block
+			vertical-align middle
+			content ''
+			background-color $light-grey
+			transform rotate(20deg)
+			size 1px 28px
+		&_first
+			&:before
+				display none
+	&__item
+		font-size 16px
+		text-decoration none
+		color $black
+		&:hover
+			color lighten($black, 40%)
