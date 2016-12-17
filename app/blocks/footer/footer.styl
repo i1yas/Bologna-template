@@ -1,2 +1,34 @@
 .footer
-	display block
+	display flex
+	&__half
+		padding-x 90px
+		min-height 180px
+		color #898989
+		flex-basis 50%
+		&_copyrights
+			padding-top 60px
+			text-align right
+			background-color #f7f7f7
+		&_navigation
+			padding-top 65px
+			background-color #ededeb
+		@media(max-width 980px)
+			padding-x 40px
+			&_navigation
+				padding-top 50px
+	&__top-sign
+		margin-bottom 20px
+	&__desc
+		font-size 12px
+		line-height 1.5
+	&__menu-item
+		margin-right 32px
+		padding-y 10px
+		display inline-block
+		font-size 13px
+		text-decoration none
+		letter-spacing .5px
+		text-transform uppercase
+		color #898989
+		&:hover
+			color $black
