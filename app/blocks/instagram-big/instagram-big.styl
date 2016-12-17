@@ -1,0 +1,46 @@
+.instagram-big
+	display block
+	&__title
+		padding-y 70px
+		text-align center
+	&__sign
+		margin-bottom 20px
+		font-family $rufina
+		font-size 36px
+		font-weight bold
+		color $black
+	&__decoration
+		position relative
+	&__line
+		position absolute
+		z-index -1
+		top 50%
+		left 50%
+		margin-left -12.5%
+		background-color #dcdcdc
+		size 25% 1px
+	&__circle
+		margin-x auto
+		background-color #b2ae7e
+		border-radius 50%
+		size 19px
+	&__photos
+		display flex
+		overflow hidden
+		flex-direction column
+		width 100%
+		height 600px
+		flex-wrap wrap
+	&__photo-container
+		display block
+		&_rect
+			display flex
+		@media(max-width 980px)
+			&_afterHalf
+				display none
+	&__photo-container_rect &__photo
+		height 100%
+	&__photo
+		display block
+		width 100%
+		height auto

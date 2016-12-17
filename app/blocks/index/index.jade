@@ -1,7 +1,9 @@
 include ../banner/banner
 include ../feed/feed
+include ../instagram-big/instagram-big
 
 mixin index()
 	+b.index&attributes(attributes)
 		+banner
 		+feed(getData('posts'))
+		+instagram-big(8, [3])

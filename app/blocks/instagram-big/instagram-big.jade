@@ -1,0 +1,26 @@
+mixin instagram-big(photoNum, rects)
+	+b.instagram-big&attributes(attributes)
+		+e.title.wrapper_wide
+			+e.sign
+				| Instagram
+			+e.decoration
+				+e.line
+				+e.circle
+		+e.photos
+			- var path
+			- var path2
+			- var half = Math.round(photoNum / 2)
+			- var afterHalf
+			- for(var i = 0; i < photoNum; i++)
+				- if(i === half)
+					- afterHalf = '_afterHalf'
+				- path = 'assets/images/instagram-big/' + (i + 1) + '.jpg'
+				- if (rects.indexOf(i - 1) !== -1 && (i + 2) < photoNum)
+					- path2 = 'assets/images/instagram-big/' + (i + 2) + '.jpg'
+					- i++
+					+e('a').photo-container._rect(class=afterHalf href='#')
+						+e('img').photo(src=path)
+						+e('img').photo(src=path2)
+				- else
+					+e('a').photo-container(class=afterHalf href='#')
+						+e('img').photo(src=path)
