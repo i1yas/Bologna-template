@@ -4,6 +4,10 @@
 		padding-top 90px
 		display flex
 		justify-content space-between
+		@media(max-width 1300px)
+			justify-content space-around
+		@media(max-width 800px)
+			flex-direction column
 	&__posts
 		display flex
 		justify-content space-between
@@ -11,9 +15,18 @@
 		flex-basis auto
 		flex-wrap wrap
 		flex-grow 1
+		@media(max-width 1300px)
+			justify-content space-around
+		@media(max-width 800px)
+			margin-x auto
+			margin-bottom 50px
+			width 90%
+			flex-basis 100%
 	&__col
 		flex-basis 400px
 		flex-shrink 0
+		@media(max-width 800px)
+			flex-basis 100%
 	&__refresh-block
 		padding-y 35px
 		text-align center
@@ -33,9 +46,23 @@
 		fill $page-grey
 	&__post
 		margin-bottom 65px
+		@media(max-width 800px)
+			margin-bottom 40px
+		@media(max-width 600px)
+			margin-bottom 25px
 	&__sidebar
 		margin-left 120px
 		flex-basis 320px
 		flex-shrink 0
+		@media(max-width 1320px)
+			margin-right 20px
+		@media(max-width 1300px)
+			margin-left 20px
+		@media(max-width 800px)
+			margin-x auto
+			width 80%
+			flex-basis 80%
+		@media(max-width 600px)
+			width 90%
 	&__sidebar-block
 		margin-bottom 60px
