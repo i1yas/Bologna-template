@@ -1,5 +1,6 @@
 .footer
 	display flex
+	flex-wrap wrap
 	&__half
 		padding-x 90px
 		min-height 180px
@@ -16,6 +17,12 @@
 			padding-x 40px
 			&_navigation
 				padding-top 50px
+		@media(max-width 600px)
+			padding 30px
+			min-height auto
+			flex-basis 100%
+			&_copyrights
+				text-align left
 	&__top-sign
 		margin-bottom 20px
 	&__desc
