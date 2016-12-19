@@ -23,6 +23,10 @@
 		display table-cell
 		vertical-align bottom
 		size 100%
+		@media(max-width 1450px)
+			padding-bottom 45px
+		@media(max-width 600px)
+			padding-bottom 30px
 	&__tag
 		margin-bottom 7px
 		padding 5px 12px
@@ -42,5 +46,11 @@
 		color white
 		opacity 1
 		transition opacity .1s
+		@media(max-width 1450px)
+			font-size 40px
+		@media(max-width 900px)
+			width 100%
+		@media(max-width 600px)
+			font-size 25px
 	&:hover &__title
 		opacity .85
