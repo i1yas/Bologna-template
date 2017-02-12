@@ -1,11 +1,13 @@
 mixin footer(menuItems)
 	+b.footer&attributes(attributes)
 		+e.half._copyrights
-			+e.top-sign
-				| © VLOGER 2015.
-			+e.desc
+			+e.container
+				+e.top-sign
+					| © VLOGER 2015.
+				+e.desc
 				| Made width by beautheme.com. All right Reserved.
 		+e.half._navigation
-			+e.menu
-				- for(var i = 0; i < menuItems.length; i++)
-					+e('a').menu-item(href='#')=menuItems[i]
+			+e.container
+				+e.menu
+					- for(var i = 0; i < menuItems.length; i++)
+						+e('a').menu-item(href='#')=menuItems[i]
