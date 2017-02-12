@@ -3,7 +3,8 @@ mixin subscribe()
 		+e.title
 			| Subscribe to my Newsletter
 		+e('form').form
-			+e.input
+			+e.container._input
 				+text-input('Your e-mail...')
-			+e('button').button
-				| Submit
+			+e.container._button
+				+e('button').button
+					| Submit
